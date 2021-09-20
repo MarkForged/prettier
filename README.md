@@ -1,3 +1,19 @@
+# Markforged Prettier Fork
+
+- https://github.com/prettier/prettier/issues/5501
+- https://github.com/prettier/prettier/pull/6644
+
+Prettier refuses to add support for HTML attributes on each line...
+
+Until it does, we can fork and modify it ourselves. Code is based off of the PR link above.
+
+Steps:
+1. Merge in the latest `prettier` changes from the remote if needed. Avoid using a `dev` branch and only branch from release tags.
+2. Run `npx yarn build` to build prettier into `dist/*`
+3. Run `cd ./dist && npm publish` which will publish under the `@markforged/prettier` package.
+
+---
+
 ![Prettier Banner](https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-banner-light.png)
 
 <h2 align="center">Opinionated Code Formatter</h2>
